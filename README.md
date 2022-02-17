@@ -1,5 +1,5 @@
 # Hospital World Docker
-Load the aws-robomaker-hospital-world environment from a docker-container.
+Load the [aws-robomaker-hospital-world environment](https://github.com/aws-robotics/aws-robomaker-hospital-world) from a docker-container.
 
 # Installation
 just run `docker-compose build`
