@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  hospital:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        ROS_DISTRO: noetic
+    environment: 
+      - DISPLAY # for camera inside gazebo
+      - NVIDIA_VISIBLE_DEVICES=all # for docker-nvidia2
+      - NVIDIA_DRIVER_CAPABILITIES=all # for docker-nvidia2
+      - "PYTHONUNBUFFERED=1" # important to show error messages if a ros service crashes!
+      - "ROS_DISTRO=noetic"
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro  # for camera inside gazebo 
+      - ./ros_ws/src/aws-robomaker-hospital-world:/root/ws/src/aws-robomaker-hospital-world:z
+    privileged: true # graphics card access
+    expose:
+      - 11311
+      - 12345
+    command: ["roslaunch", "aws_robomaker_hospital_world", "view_hospital.launch", "--screen"]
