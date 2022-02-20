@@ -1,7 +1,7 @@
 # Hospital World Docker
 Load the [aws-robomaker-hospital-world environment](https://github.com/aws-robotics/aws-robomaker-hospital-world) from a docker-container.
 
-Also spawns an actor that moves inside the hospital on a fixed path (see [../actor-in-hospital]() ).
+Also spawns an actor that moves inside the hospital on a fixed path (see [this repo](../../../actor-in-hospital) ).
 
 # Installation
 just run `docker-compose build`
