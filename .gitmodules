@@ -1,3 +1,6 @@
 [submodule "aws-robomaker-hospital-world"]
 	path = ros_ws/src/aws-robomaker-hospital-world
 	url = https://github.com/aws-robotics/aws-robomaker-hospital-world.git
+[submodule "gazebo-actor-in-hospital"]
+	path = ros_ws/src/gazebo-actor-in-hospital
+	url = git@github.com:brean/gazebo-actor-in-hospital.git

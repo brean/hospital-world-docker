@@ -1,3 +1,3 @@
 #!/bin/bash
-source /root/ws/devel/setup.bash
+source /root/ws/install/setup.bash
 exec "$@"
